@@ -1,0 +1,75 @@
+---
+title       : Interest Calculator
+subtitle    : Developing Data Products Course Project
+author      : 
+job         : 
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : zenburn      # 
+widgets     : [mathjax]            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## Purpose
+
+This presentation is part of the course project for the Coursera Developing Data Products course. It contains a brief explanation of the Shiny application "InterestCalculator" created as part of the project. The application can be accessed [here] [1].
+
+### Other links
+
+- [Github repository with the code for the application] [2]
+
+- [Github repository for this presentation] [3]
+
+[1]: https://sjojoa.shinyapps.io/Interest_Calculator "shinyApp link"
+[2]: https://github.com/SebasJ23/Coursera-DevDataProd-Project "Repository with code"
+[3]: https://github.com/SebasJ23/Coursera-DevDataProd-Presentation "Repository with presentation"
+
+---
+
+## Application Description
+
+The application calculates the interest gained on an investment or savings. It can calculate both simple and compound interests. For it to work, it requires that the user specifies the initial amount of money invested (hereinafter referred to as "principal"), the interest rate for the investment and the time the invested will be made. In the case of a compound interest, the user should specify one additional parameter: the number of time the interest is compounded per unit of time.
+
+Furthermore, the application also allows the user to customize the currency in which the investment is done and the unit of time in which it is measured (days, months or years).
+
+The application has supporting documentation with detailed information on how to use it under the "Documentation" tab.
+
+---
+
+## Equations
+
+The calculations the application does are based on these two equations:
+
+Simple interest equation:
+$$ V = P \times (1 + \frac{rt}{100}) $$
+
+Compound interest equation:
+$$ V = P \times (1 + \frac{r}{100n})^{nt} $$
+
+Where $V$ is the total amount of money (principal + interest), $P$ is the principal, $r$ is the interest rate (in %), $t$ is the time and $n$ is the number of times compounded per unit of time.
+
+The value for the interest alone is calculated with the formula:
+$$interest = V - P$$
+
+---
+
+## Example
+
+This is an example of one of the calculations the application can do. For a principal of $1000$ USD at a simple interest rate of $10%$, after a period of $5$ years the total amount will be:
+
+```{r}
+simpleTotal <- function(principal, rate, times) {
+    principal * (1 + (rate * times)/100)}
+initialInvestment <- 1000; simpleTotal(initialInvestment, 10, 5)
+```
+
+Therefore the interest alone will be:
+
+```{r}
+simpleTotal(initialInvestment, 10, 5) - initialInvestment
+```
+
+
+
+
