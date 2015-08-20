@@ -23,7 +23,7 @@ This presentation is part of the course project for the Coursera Developing Data
 
 [1]: https://sjojoa.shinyapps.io/Interest_Calculator "shinyApp link"
 [2]: https://github.com/SebasJ23/Coursera-DevDataProd-Project "Repository with code"
-[3]: https://github.com/SebasJ23/Coursera-DevDataProd-Presentation/tree/gh-pages "Repository with presentation"
+[3]: https://github.com/SebasJ23/Coursera-DevDataProd-Presentation "Repository with presentation"
 
 ---
 
